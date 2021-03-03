@@ -11,7 +11,6 @@ public class CategoryActivityData implements ICategoryActivityData {
     ArrayList<String> fabArray = new ArrayList<>();
     ArrayList<String> notionArray = new ArrayList<>();
 
-
     public CategoryActivityData() {
 
         //add groups
@@ -39,4 +38,6 @@ public class CategoryActivityData implements ICategoryActivityData {
     public HashMap<String, ArrayList<String>> getListChild() {
         return listChild;
     }
+
+
 }

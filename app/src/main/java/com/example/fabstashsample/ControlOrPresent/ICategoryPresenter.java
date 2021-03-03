@@ -8,4 +8,5 @@ import java.util.HashMap;
 public interface ICategoryPresenter {
     ArrayList<String> getListGroup();
     HashMap<String, ArrayList<String>> getListChild();
+
 }

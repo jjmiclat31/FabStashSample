@@ -9,9 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FabStashSample">
-        <activity android:name=".View.ItemListView"
-            android:parentActivityName=".View.MainActivity"
-            >
+        <activity android:name=".View.DetailView"
+            android:parentActivityName=".View.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".View.MainActivity" />
+        </activity>
+        <activity
+            android:name=".View.ItemListView"
+            android:parentActivityName=".View.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".View.MainActivity" />

@@ -4,8 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.fabstashsample.ControlOrPresent.IItemListPresenter;
 import com.example.fabstashsample.ControlOrPresent.ItemListPresenter;
@@ -15,8 +18,6 @@ import com.example.fabstashsample.R;
 public class ItemListView extends AppCompatActivity implements IItemListView {
 
     ListView listView;
-    //String[] dataTitles = {"Cotton", "Wool"};
-    //String[] dataDescriptions = {"Cotton Description", "Wool Description"};
     IItemListPresenter presenter;
 
     @Override
@@ -37,9 +38,24 @@ public class ItemListView extends AppCompatActivity implements IItemListView {
                 presenter.getDataTitlesFromData(), presenter.getDataDescriptionsFromData());
         listView.setAdapter(adapter);
 
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String selectedItem = parent.getItemAtPosition(position).toString();
+                Intent intent = new Intent(ItemListView.this, DetailView.class);
+                intent.putExtra(ITEMNAME, selectedItem);
+                startActivity(intent);
+            }
+        });
+
 
     }
 
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+    }
 }
 
 

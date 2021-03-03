@@ -77,15 +77,6 @@ public class CategoryAdapter extends BaseExpandableListAdapter {
         String sChild = String.valueOf(getChild(groupPosition,childPosition));
         textView.setText(sChild);
 
-        /*
-        textView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Toast.makeText(parent.getContext(),sChild,Toast.LENGTH_SHORT).show();
-
-            }
-        });*/
         return convertView;
     }
 

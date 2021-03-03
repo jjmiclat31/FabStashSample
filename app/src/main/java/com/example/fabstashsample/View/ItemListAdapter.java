@@ -15,6 +15,7 @@ public class ItemListAdapter extends ArrayAdapter<String> {
     Context context;
     String[] dataTitles;
     String[] dataDescriptions;
+    String intent;
 
     public ItemListAdapter(Context context, String[] dataTitles, String[] dataDescriptions) {
         super(context, R.layout.items_in_list, R.id.textView1,dataTitles);
@@ -39,12 +40,17 @@ public class ItemListAdapter extends ArrayAdapter<String> {
         }
         holder.itemTitle.setText(dataTitles[position]);
         holder.itemDescription.setText(dataDescriptions[position]);
-        itemsList.setOnClickListener(new View.OnClickListener() {
+        intent = dataTitles[position];
+        /*itemsList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getContext(),dataTitles[position],Toast.LENGTH_SHORT).show();
             }
-        });
+        });*/
         return itemsList;
+    }
+
+    public String getIntent() {
+        return intent;
     }
 }
