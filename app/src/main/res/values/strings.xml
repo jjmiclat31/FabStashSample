@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">FabStashSample</string>
+    <string name="notes">Notes</string>
+    <string name="fabric_image">Fabric Image</string>
+    <string name="material">Material:</string>
+    <string name="textview">Item notes goes here.</string>
+    <string name="length">Length</string>
+    <string name="source">Source:</string>
+    <string name="price_per_unit">Price per unit:</string>
+    <string name="width">Width:</string>
+    <string name="item_name_from_intent">Item name from intent</string>
+    <string name="meterial_input">Meterial Input</string>
+    <string name="length_input">Length Input</string>
+    <string name="width_input">Width Input</string>
+    <string name="price_input">Price Input</string>
+    <string name="source_input">Source Input</string>
+    <string name="quantity_input">Quantity input</string>
+    <string name="size_input">Size input</string>
+    <string name="quantity">Quantity:</string>
+    <string name="size">Size:</string>
 </resources>

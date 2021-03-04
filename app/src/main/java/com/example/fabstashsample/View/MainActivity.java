@@ -25,7 +25,6 @@ public class MainActivity extends AppCompatActivity implements ICategoryView {
         presenter = new CategoryPresenter(this);
         adapter = new CategoryAdapter(presenter.getListGroup(),presenter.getListChild());
         expandableListView.setAdapter(adapter);
-
         expandableListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
             @Override
             public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
@@ -36,6 +35,8 @@ public class MainActivity extends AppCompatActivity implements ICategoryView {
                 return true;
             }
         });
+
+
 
     }
 

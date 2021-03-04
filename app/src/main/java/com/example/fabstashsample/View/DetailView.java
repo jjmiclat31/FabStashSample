@@ -13,10 +13,16 @@ public class DetailView extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detail_view);
-
         Intent intent = getIntent();
         String itemName = intent.getStringExtra(ItemListView.ITEMNAME);
+
+        if (itemName.contains("Cotton")) {
+            setContentView(R.layout.activity_detail_view);
+        }
+        else {
+            setContentView(R.layout.detail_view_notion);
+        }
+
         TextView textView =  findViewById(R.id.detailItemtxtView);
         textView.setText(itemName);
     }
