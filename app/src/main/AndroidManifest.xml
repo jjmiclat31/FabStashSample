@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FabStashSample">
         <activity android:name=".View.DetailView"
-            android:parentActivityName=".View.MainActivity">
+            android:parentActivityName=".View.ItemListView">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".View.MainActivity" />
+                android:value=".View.ItemListView" />
         </activity>
         <activity
             android:name=".View.ItemListView"
