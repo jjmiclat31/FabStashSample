@@ -8,6 +8,7 @@ public class ItemListData implements IItemListData {
     String[] cottonDescriptions = {"Cotton1 Description", "Cotton2 Description"};
     String[] woolTitles = {"Wool1", "Wool2"};
     String[] woolDescriptions = {"Wool1 Description", "Wool2 Description"};
+    String[] notion1Titles = {"Notion1", "Notion2"};
     public ItemListData() {
 
 
