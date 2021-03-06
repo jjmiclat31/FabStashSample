@@ -4,15 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import com.example.fabstashsample.ControlOrPresent.IItemListPresenter;
 import com.example.fabstashsample.ControlOrPresent.ItemListPresenter;
-import com.example.fabstashsample.Data.IItemListData;
 import com.example.fabstashsample.R;
 
 public class ItemListView extends AppCompatActivity implements IItemListView {
@@ -50,6 +49,15 @@ public class ItemListView extends AppCompatActivity implements IItemListView {
         });
 
 
+
+
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        return  true;
     }
 
     @Override

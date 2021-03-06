@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/LogID"
+        android:title="IDK"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/SortID"
+        android:title="Sort"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/NewListID"
+        android:title="New List"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/InfoID"
+        android:title="Info"
+        app:showAsAction="never">
+    </item>
+</menu>

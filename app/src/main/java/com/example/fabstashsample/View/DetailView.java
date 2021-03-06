@@ -1,10 +1,14 @@
 package com.example.fabstashsample.View;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -15,7 +19,7 @@ public class DetailView extends AppCompatActivity {
 
     EditText editNotes;
     TextView notes;
-    String notes1;
+    String layout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,20 +29,20 @@ public class DetailView extends AppCompatActivity {
 
         if (itemName.contains("Cotton") || itemName.contains("Wool")) {
             setContentView(R.layout.activity_detail_view_fabric);
+            layout = "fabric";
         }
         else {
             setContentView(R.layout.activty_detail_view_notion);
+            layout = "notion";
         }
 
-        //TextView textView =  findViewById(R.id.detailItemtxtView);
-        //textView.setText(itemName);
     }
 
-    public void editViewF(View view) {
+    public void editViewF() {
         setContentView(R.layout.edit_view_layout_fabric);
     }
 
-    public void editViewN(View view) {
+    public void editViewN() {
         setContentView(R.layout.edit_view_layout_notion);
     }
 
@@ -65,8 +69,33 @@ public class DetailView extends AppCompatActivity {
         Log.d("Success", notesFromEdit);
     }
 
-    public void setNotes() {
-        notes.setText(notes1);
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.detail_view_menu, menu);
+        return  true;
     }
 
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.IDKID:
+
+                return true;
+            case R.id.EditID:
+                if (layout == "fabric") {
+                    editViewF();
+                }
+                if (layout == "notion") {
+                    editViewN();
+                }
+
+                return true;
+            case R.id.DeleteID:
+
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 }
