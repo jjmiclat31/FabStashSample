@@ -9,6 +9,9 @@ public class ItemListData implements IItemListData {
     String[] woolTitles = {"Wool1", "Wool2"};
     String[] woolDescriptions = {"Wool1 Description", "Wool2 Description"};
     String[] notion1Titles = {"Notion1", "Notion2"};
+    String[] notion1Descriptions = {"Notion1 Description", "Notion2 Description"};
+    String[] notion2Titles = {"Notion2.1", "Notion2.2"};
+    String[] notion2Descriptions = {"Notion2.1 Description", "Notion2.2 Description"};
     public ItemListData() {
 
 
@@ -26,13 +29,23 @@ public class ItemListData implements IItemListData {
 
     @Override
     public void setReturnData(String itemName) {
-        if (itemName.equals("Cotton")) {
-            dataTitles = cottonTitles;
-            dataDescriptions = cottonDescriptions;
-        }
-        else {
-            dataTitles = woolTitles;
-            dataDescriptions =woolDescriptions;
+        switch (itemName) {
+            case "Cotton":
+                dataTitles = cottonTitles;
+                dataDescriptions = cottonDescriptions;
+                break;
+            case "Wool":
+                dataTitles = woolTitles;
+                dataDescriptions = woolDescriptions;
+                break;
+            case "Notion1":
+                dataTitles = notion1Titles;
+                dataDescriptions = notion1Descriptions;
+                break;
+            default:
+                dataTitles = notion2Titles;
+                dataDescriptions = notion2Descriptions;
+                break;
         }
     }
 
